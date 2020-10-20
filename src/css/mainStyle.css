@@ -283,14 +283,14 @@ body {
   margin-bottom: 0;
 }
 #slider-top .slick-prev::before {
-	content: '>';
-    color: #ffbb1a;
-    font-size: 30px;
+  content: ">";
+  color: #ffbb1a;
+  font-size: 30px;
 }
 #slider-top .slick-next::before {
-	content: '<';
-    color: #ffbb1a;
-    font-size: 30px;
+  content: "<";
+  color: #ffbb1a;
+  font-size: 30px;
 }
 #slider-top .slick-next {
   right: 42%;
@@ -342,6 +342,11 @@ body {
 /* end components */
 
 /* utils */
+.hide {
+  transition: 0.15s;
+  opacity: 0;
+  visibility: hidden;
+}
 .text--orange {
   color: #ffbb1a;
 }
