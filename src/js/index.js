@@ -1,10 +1,11 @@
 const main = () => {
   // vars
   const STATE = {
-    scroll_breakPoint: 200,
+    scroll_breakPoint: 50,
   };
 
   const topBigSliderBottom = document.querySelector(".top-big-slider__bottom");
+  const topBigSliderBottom2 = document.querySelector(".top-big-slider__bottom--2");
   const sliderTop_dots = document.querySelector("#slider-top .slick-dots");
   const sliderTop_arrows = document.querySelectorAll(
     "#slider-top .slick-arrow"
@@ -31,6 +32,8 @@ const main = () => {
     sliderTop_arrows[0].classList.remove("d-none");
     sliderTop_arrows[1].classList.remove("d-none");
 
+    topBigSliderBottom2.classList.add('d-none')
+
     //   $(".top-big-slider__bottom").fadeIn();
     //   show(topBigSliderBottom);
   };
@@ -39,6 +42,8 @@ const main = () => {
     sliderTop_dots.classList.add("d-none");
     sliderTop_arrows[0].classList.add("d-none");
     sliderTop_arrows[1].classList.add("d-none");
+
+    topBigSliderBottom2.classList.remove('d-none')
 
     //   $(".top-big-slider__bottom").fadeOut();
     //   hide(topBigSliderBottom);
