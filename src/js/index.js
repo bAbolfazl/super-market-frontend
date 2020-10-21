@@ -5,10 +5,19 @@ const main = () => {
   };
 
   const topBigSliderBottom = document.querySelector(".top-big-slider__bottom");
-  const topBigSliderBottom2 = document.querySelector(".top-big-slider__bottom--2");
+  const topBigSliderBottom2 = document.querySelector(
+    ".top-big-slider__bottom--2"
+  );
   const sliderTop_dots = document.querySelector("#slider-top .slick-dots");
   const sliderTop_arrows = document.querySelectorAll(
     "#slider-top .slick-arrow"
+  );
+
+  // right menu desktop
+  const section_container = document.querySelectorAll("section > .container");
+  const rightMenuDesktop = document.querySelector(".right-menu--desktop");
+  const rightMenuDesktop_Btn = document.querySelector(
+    "#right-menu--desktop-btn"
   );
 
   // utils
@@ -32,7 +41,7 @@ const main = () => {
     sliderTop_arrows[0].classList.remove("d-none");
     sliderTop_arrows[1].classList.remove("d-none");
 
-    topBigSliderBottom2.classList.add('d-none')
+    topBigSliderBottom2.classList.add("d-none");
 
     //   $(".top-big-slider__bottom").fadeIn();
     //   show(topBigSliderBottom);
@@ -43,10 +52,25 @@ const main = () => {
     sliderTop_arrows[0].classList.add("d-none");
     sliderTop_arrows[1].classList.add("d-none");
 
-    topBigSliderBottom2.classList.remove('d-none')
+    topBigSliderBottom2.classList.remove("d-none");
 
     //   $(".top-big-slider__bottom").fadeOut();
     //   hide(topBigSliderBottom);
+  };
+
+  const openRightMenuDesktop = () => {
+    rightMenuDesktop.classList.toggle("removedX");
+    section_container.forEach((item) => {
+      item.style.marginRight = "20px";
+      setInterval(() => {
+        item.style.marginRight = "120px";
+      }, 100);
+    });
+  };
+
+  const closeRightMenuDesktop = () => {
+    rightMenuDesktop.classList.toggle("removedX");
+    section_container.style.marginRight = "0px";
   };
 
   // handlers
@@ -65,7 +89,16 @@ const main = () => {
     }
   };
 
+  const handle_rightMenuDesktop_btn_clik = () => {
+    openRightMenuDesktop();
+  };
+
   // events
+  rightMenuDesktop_Btn.addEventListener(
+    "click",
+    handle_rightMenuDesktop_btn_clik
+  );
+
   window.addEventListener("scroll", handle_window_scroll);
 };
 

@@ -192,6 +192,10 @@ body {
   background-color: #fffaff;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 /* end general */
 
 /* specific */
@@ -361,7 +365,8 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 0 0 100% 100% / 0 0 200% 200%;
-  border-bottom: black solid 1px;
+  border: black solid 3px;
+  border-top: none;
 }
 .card--small h3 {
   font-size: 1.1em;
@@ -384,9 +389,9 @@ body {
 }
 .lined-head .flex-grow-1 {
   background-color: #090702;
-  height: 2px;
+  height: 3px;
 }
-.card--medium div:last-child img {
+.card--medium span img {
   width: 15px;
   height: 15px;
   object-fit: contain;
@@ -423,9 +428,116 @@ main .slick-arrow::before {
   right: 5px;
   font-size: 0.7em;
 }
+.btn-outline--dark:hover {
+  background-image: linear-gradient(to bottom, #090702, #68645b);
+  color: #ffbb1a;
+}
+.card--curved > div:first-child > img {
+  width: 32px;
+  height: 32px;
+}
+.card--curved:hover > div:last-child {
+  color: #ffbb1a;
+}
+.card--curved > div:last-child {
+  font-size: 30px;
+  font-weight: lighter;
+  padding-left: 20px;
+}
+.card--curved > div:first-child {
+  background-color: #090702;
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__content > div {
+  flex-basis: 33.333%;
+}
+.footer__content {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+footer {
+  background-color: #090702;
+}
+.footer__icon {
+  width: 16px;
+  height: 16px;
+}
+.footer__logo {
+  width: 190px;
+}
+.right-menu--desktop > nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 85%;
+  padding-bottom: 30%;
+}
+.right-menu--desktop .logo {
+  width: 85px;
+  object-fit: contain;
+}
+.right-menu--desktop .active {
+  border-radius: 8px;
+  background-color: #da2128;
+  padding: 5px 8px;
+}
+.right-menu--desktop .icon {
+  width: 32px;
+}
+nav > div:nth-child(2) {
+  border-bottom: solid 1.5px;
+  padding-bottom: 10px;
+  width: 50%;
+  /* margin-top: 16px; */
+}
+section > .container {
+  transition: margin 0.4s;
+  marg
+}
 /* end specific */
 
 /* components */
+.right-menu--desktop {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 120px;
+  background-color: #090702;
+}
+.section--bg {
+  background-image: url("../img/supermarket.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 160px;
+  border-radius: 100% 100% 0 0 / 150% 150% 0 0;
+  border: solid black;
+  overflow: hidden;
+}
+.card--curved {
+  cursor: pointer;
+  flex-basis: 31%;
+  flex-grow: 1;
+  margin-right: 11px;
+  margin-left: 11px;
+  margin-bottom: 20px;
+  height: 75px;
+  border-radius: 50px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
 .card-badge {
   position: absolute;
   background-color: red;
@@ -491,7 +603,8 @@ main .slick-arrow::before {
 .border-bottom--cirle {
   height: 70px;
   border-radius: 100% 100% 0 0 / 200% 200% 0 0;
-  border-top: black solid 1px;
+  border: black solid 3px;
+  border-bottom: none;
 }
 .card--small {
   flex-basis: 110px;
@@ -536,6 +649,7 @@ main .slick-arrow::before {
   cursor: pointer;
   font-size: 1.2em;
   padding-right: 40px;
+  background-color: black;
 }
 
 /* end components */
@@ -545,6 +659,13 @@ main .slick-arrow::before {
   transition: 0.15s;
   opacity: 0;
   visibility: hidden;
+}
+.removedX {
+  transform: translateX(100%);
+  transition: 0.2s;
+}
+.transition {
+  transition: 0.4s;
 }
 
 .text--red {

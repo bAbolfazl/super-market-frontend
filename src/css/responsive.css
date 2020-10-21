@@ -1,0 +1,70 @@
+/* lg */
+/* max */
+
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 12px;
+  }
+  .section--bg {
+    height: 65px;
+  }
+  .section--bg .top-big-slider__item__inner {
+    font-size: 1.5em !important;
+  }
+  .section--bg {
+    border: none;
+    margin-right: -5rem !important;
+    margin-left: -5rem !important;
+  }
+  .card--medium_cont {
+    margin: 5px;
+    font-size: 0.9em;
+    height: 200px;
+  }
+  .card--medium {
+    height: 145px;
+  }
+  .food-baner {
+    flex-basis: unset;
+    height: 126px;
+  }
+  .card--small {
+    margin: 5px 2.5px;
+  }
+  .top-big-slider__bottom--2 {
+    font-size: 0.8em;
+  }
+  .top-big-slider__bottom--2 .custom--select--bg {
+    left: 10px;
+  }
+  .top-big-slider__bottom--2 .top-big-slider__item__select-cont {
+    width: 100px;
+    height: 32px;
+  }
+  .custom--search-input__bnt {
+    width: 25px;
+    height: 25px;
+  }
+  .custom--search-input {
+    width: 214px;
+    height: 32px;
+  }
+  .top-big-slider__bottom {
+    height: 50px;
+  }
+  #slider-top .slick-prev {
+    left: 30%;
+  }
+  #slider-top .slick-next {
+    right: 30%;
+  }
+  .top-big-slider__item__inner h3:last-of-type {
+    font-weight: normal;
+  }
+  .top-big-slider__item__inner h3 {
+    font-size: 1.42em;
+  }
+  .top-big-slider__item__inner h1 {
+    font-size: 2em;
+  }
+}
