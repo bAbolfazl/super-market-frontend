@@ -112,7 +112,7 @@ const main = () => {
       if (!topBigSliderBottom.classList.contains("d-none")) return;
 
       topBigSliderBottom_show();
-    } else if (scrollY > STATE.scroll_breakPoint) {
+    } else if (user_scrollY > STATE.scroll_breakPoint) {
       if (topBigSliderBottom.classList.contains("d-none")) return;
 
       topBigSliderBottom_hide();
@@ -126,7 +126,7 @@ const main = () => {
   };
   const handle_centerContent_click = (e) => {
     const target = e.target;
-    console.log(target);
+    // console.log(target);
     if (STATE.rightMenuDesktop_open && !(rightMenuDesktop_Btn == target))
       closeRightMenuDesktop();
   };
