@@ -2,6 +2,7 @@ const main = () => {
   // vars
   const STATE = {
     scroll_breakPoint: 50,
+    scroll_breakPoint_cartBtn: window.innerHeight,
     rightMenuDesktop_open: false,
   };
 
@@ -107,6 +108,11 @@ const main = () => {
     // debugger
     const user_scrollY = window.scrollY;
     // const user_screenHeight = window.innerHeight;
+
+    if ((user_scrollY > STATE.scroll_breakPoint_cartBtn) && (leftCartDesktop.classList.contains('removedX--n')))
+      leftCartDesktop_Btn.classList.remove("removedX--n2")
+    else { closeLeftCartDesktop(); leftCartDesktop_Btn.classList.add("removedX--n2"); }
+
 
     if (user_scrollY < STATE.scroll_breakPoint) {
       if (!topBigSliderBottom.classList.contains("d-none")) return;

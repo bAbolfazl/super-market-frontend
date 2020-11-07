@@ -391,8 +391,8 @@ main {
   height: 3px;
 }
 .card--medium span img {
-  width: 15px;
-  height: 15px;
+  width: 20PX;
+  height: 20PX;
   object-fit: contain;
 }
 .card--medium > img:first-child {
@@ -748,8 +748,9 @@ section > .container {
 .btn-outline--dark {
   border-radius: 25px;
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16);
-  border: solid 2px #090702;
+  border: solid 2px #090702 !important;
   background-color: #fffaff;
+  transition: .3s;
 }
 .card--medium_cont {
   height: 243px;
