@@ -187,7 +187,7 @@ button {
 body {
   font-family: IRANSans, sans-serif;
   color: #000;
-  font-size: 14px;
+  font-size: 13px;
   text-align: right;
   direction: rtl;
   background-color: #fffaff;
@@ -272,7 +272,12 @@ main {
   height: 80px;
   width: 100%;
   position: absolute;
-  background-image: linear-gradient(to bottom, #68645b, #090702);
+  background-image: url("../img/Path_black.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: bottom -1px;
+  background-position-x: center;
+  height: 6vw;
   bottom: 0;
   right: 0;
   border-radius: 100% 100% 0 0 / 200% 200% 0 0;
@@ -284,7 +289,7 @@ main {
 }
 
 #slider-top .slick-dots {
-  bottom: 10px;
+  bottom: 17px;
   z-index: 1;
 }
 #slider-top .slick-dots li.slick-active button:before {
@@ -299,14 +304,26 @@ main {
   margin-bottom: 0;
 }
 .slick-prev::before {
-  content: ">";
+  content: "";
+  background-image: url("../img/next_2_orange.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
   color: #ffbb1a;
   font-size: 30px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
 }
 .slick-next::before {
-  content: "<";
+  content: "";
+  background-image: url("../img/path-2_orange.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
   color: #ffbb1a;
   font-size: 30px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
 }
 #slider-top .slick-next {
   right: 42%;
@@ -359,13 +376,15 @@ main {
   font-size: 1.5em;
   text-align: center;
   font-weight: bold;
-  height: 70px;
+  height: 6.2vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 100% 100% / 0 0 200% 200%;
-  border: black solid 3px;
-  border-top: none;
+  
+  background-image: url('../img/Path_haed-down.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
 }
 .card--small h3 {
   font-size: 1.1em;
@@ -391,8 +410,8 @@ main {
   height: 3px;
 }
 .card--medium span img {
-  width: 20PX;
-  height: 20PX;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
 }
 .card--medium > img:first-child {
@@ -411,7 +430,19 @@ main {
 main .slick-list.draggable {
   padding-top: 20px;
 }
+main .slick-next::before {
+  background-image: url('../img/path-2.svg');
+
+}
+
+main .slick-prev::before {
+  background-image: url('../img/next_2.svg');
+
+}
+
 main .slick-arrow::before {
+  background-repeat: no-repeat;
+  background-size: contain;
   color: black;
   border: solid 1px black;
   font-size: 18px;
@@ -420,6 +451,8 @@ main .slick-arrow::before {
   height: 25px;
   display: inline-block;
   font-weight: bold;
+  padding: 5px;
+background-origin: content-box;
 }
 .card-badge > span {
   position: absolute;
@@ -435,8 +468,8 @@ main .slick-arrow::before {
   width: 32px;
   height: 32px;
 }
-.card--curved:hover > div:last-child {
-  color: #ffbb1a;
+.card--curved:hover .left-2 path {
+  stroke: #ffbb1a;
 }
 .card--curved > div:last-child {
   font-size: 30px;
@@ -502,9 +535,15 @@ section > .container {
 .center-content--small {
   width: calc(100% - 120px) !important;
 }
+
 .left-cart--desktop__header .cart {
+  vertical-align: middle;
   width: 20px;
   height: 20px;
+}
+.left-cart--desktop .left-cart--desktop__header .cart {
+  width: 25px;
+  height: 25px;
 }
 .left-cart--desktop__header .closee {
   height: 25px;
@@ -646,6 +685,7 @@ section > .container {
   height: 28px;
 }
 .card--cart {
+  padding: 7px;
   position: relative;
   border-radius: 8px;
   width: 275px;
@@ -750,7 +790,7 @@ section > .container {
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16);
   border: solid 2px #090702 !important;
   background-color: #fffaff;
-  transition: .3s;
+  transition: 0.3s;
 }
 .card--medium_cont {
   height: 243px;
@@ -794,10 +834,15 @@ section > .container {
   flex-basis: 45%;
 }
 .border-bottom--cirle {
-  height: 70px;
+  /* height: 70px;
   border-radius: 100% 100% 0 0 / 200% 200% 0 0;
   border: black solid 3px;
-  border-bottom: none;
+  border-bottom: none; */
+  background-image: url('../img/Path_head-up.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 7vw;
 }
 .card--small {
   flex-basis: 110px;
