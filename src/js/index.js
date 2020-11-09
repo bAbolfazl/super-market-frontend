@@ -17,8 +17,8 @@ const main = () => {
 
   const centerContent = document.querySelector("#center-content");
   const rightMenuDesktop = document.querySelector(".right-menu--desktop");
-  const rightMenuDesktop_Btn = document.querySelector(
-    "#right-menu--desktop-btn"
+  const rightMenuDesktop_Btns = document.querySelectorAll(
+    ".right-menu--desktop-btn"
   );
 
   const leftCartDesktop = document.querySelector(".left-cart--desktop");
@@ -39,6 +39,8 @@ const main = () => {
   const bottomCartMobile_btn_close = document.querySelector(
     "#bottom-cart--mobile__btn--close"
   );
+
+  const topMenuSticky = document.querySelector("#top-menu--sticky");
 
   // utils
 
@@ -107,12 +109,21 @@ const main = () => {
   (handle_window_scroll = () => {
     // debugger
     const user_scrollY = window.scrollY;
-    // const user_screenHeight = window.innerHeight;
+    const user_screenHeight = window.innerHeight;
 
-    if ((user_scrollY > STATE.scroll_breakPoint_cartBtn) && (leftCartDesktop.classList.contains('removedX--n')))
-      leftCartDesktop_Btn.classList.remove("removedX--n2")
-    else { closeLeftCartDesktop(); leftCartDesktop_Btn.classList.add("removedX--n2"); }
+    if (user_scrollY >= user_screenHeight)
+      topMenuSticky.classList.remove("hide");
+    else topMenuSticky.classList.add("hide");
 
+    if (
+      user_scrollY > STATE.scroll_breakPoint_cartBtn &&
+      leftCartDesktop.classList.contains("removedX--n")
+    )
+      leftCartDesktop_Btn.classList.remove("removedX--n2");
+    else {
+      closeLeftCartDesktop();
+      leftCartDesktop_Btn.classList.add("removedX--n2");
+    }
 
     if (user_scrollY < STATE.scroll_breakPoint) {
       if (!topBigSliderBottom.classList.contains("d-none")) return;
@@ -132,8 +143,12 @@ const main = () => {
   };
   const handle_centerContent_click = (e) => {
     const target = e.target;
-    // console.log(target);
-    if (STATE.rightMenuDesktop_open && !(rightMenuDesktop_Btn == target))
+    console.log(target);
+    if (
+      STATE.rightMenuDesktop_open &&
+      !(rightMenuDesktop_Btns[0] == target) &&
+      !(rightMenuDesktop_Btns[1] == target)
+    )
       closeRightMenuDesktop();
   };
   const handle_leftCartDesktop_Btn_click = () => {
@@ -161,9 +176,8 @@ const main = () => {
     handle_leftCartDesktop_Btn_click
   );
   centerContent.addEventListener("click", handle_centerContent_click);
-  rightMenuDesktop_Btn.addEventListener(
-    "click",
-    handle_rightMenuDesktop_btn_click
+  rightMenuDesktop_Btns.forEach((item) =>
+    item.addEventListener("click", handle_rightMenuDesktop_btn_click)
   );
   bottomMenuMobile_btn.addEventListener(
     "click",

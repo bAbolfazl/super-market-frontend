@@ -380,8 +380,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  background-image: url('../img/Path_haed-down.svg');
+
+  background-image: url("../img/Path_haed-down.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
@@ -431,13 +431,11 @@ main .slick-list.draggable {
   padding-top: 20px;
 }
 main .slick-next::before {
-  background-image: url('../img/path-2.svg');
-
+  background-image: url("../img/path-2.svg");
 }
 
 main .slick-prev::before {
-  background-image: url('../img/next_2.svg');
-
+  background-image: url("../img/next_2.svg");
 }
 
 main .slick-arrow::before {
@@ -452,7 +450,7 @@ main .slick-arrow::before {
   display: inline-block;
   font-weight: bold;
   padding: 5px;
-background-origin: content-box;
+  background-origin: content-box;
 }
 .card-badge > span {
   position: absolute;
@@ -712,7 +710,7 @@ section > .container {
   width: 325px;
   background-color: #090702;
   box-shadow: -5px 3px 12px 0 #68645b;
-  /* z-index: 8; */
+  z-index: 10008;
   transition: 0.4s;
 }
 .left-cart--desktop__btn {
@@ -838,7 +836,7 @@ section > .container {
   border-radius: 100% 100% 0 0 / 200% 200% 0 0;
   border: black solid 3px;
   border-bottom: none; */
-  background-image: url('../img/Path_head-up.svg');
+  background-image: url("../img/Path_head-up.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
